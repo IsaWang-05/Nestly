@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Property Management</title>
+    <link rel="stylesheet" type="text/css" href="/property_static/property.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/property_static/logo.jpeg" alt="Logo" class="logo">
+            <h1>Property Management System</h1>
+        </div>
+
+        <!-- Properties Table -->
+        <table id="propertiesTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Address</th>
+                    <th>Type</th>
+                    <th>Size</th>
+                    <th>Price</th>
+                    <th>Availability</th>
+                </tr>
+            </thead>
+            <tbody id="propertiesResult">
+                <!-- Property rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Add Property Form -->
+        <div class="property-form">
+            <h2>Create Property</h2>
+            <form id="createPropertyForm">
+                <input type="text" name="property_address" placeholder="Property Address" required>
+                <input type="text" name="house_type" placeholder="House Type" required>
+                <input type="number" name="house_size" placeholder="House Size (sq ft)" required>
+                <input type="number" name="price" placeholder="Price" required>
+                <select name="availability" placeholder="Availability" required>
+                    <option value="1">Available</option>
+                    <option value="0">Not Available</option>
+                </select>
+                <button type="submit">Create Property</button>
+            </form>
+        </div>
+
+        <!-- Update Property Form -->
+        <div class="property-form">
+            <h2>Update Property</h2>
+            <form id="updatePropertyForm">
+                <input type="text" name="property_id" placeholder="Property ID" required>
+                <input type="text" name="property_address" placeholder="Property Address">
+                <input type="text" name="house_type" placeholder="House Type">
+                <input type="number" name="house_size" placeholder="House Size (sq ft)">
+                <input type="number" name="price" placeholder="Price">
+                <select name="availability" placeholder="Availability">
+                    <option value="1">Available</option>
+                    <option value="0">Not Available</option>
+                </select>
+                <button type="submit">Update Property</button>
+            </form>
+        </div>
+
+        <!-- Delete Property Form -->
+        <div class="property-form">
+            <h2>Delete Property</h2>
+            <form id="deletePropertyForm">
+                <input type="text" placeholder="Property ID" required>
+                <button type="submit">Delete Property</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/property_static/host_property_management.js"></script>
+</body>
+</html>

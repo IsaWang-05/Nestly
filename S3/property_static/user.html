@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Host ID</title>
+    <link rel="stylesheet" type="text/css" href="/property_static/property.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/property_static/logo.jpeg" alt="Logo" class="logo">
+        <h1>Enter User ID</h1>
+        <input type="number" id="inputUserId" placeholder="Enter 8-digit Host ID" minlength="8" maxlength="8" required>
+        <button id="bookingsButton">Bookings</button>
+        <button id="searchButton">Search</button>
+    </div>
+    <script>
+        document.getElementById('bookingsButton').addEventListener('click', function() {
+            var userId = document.getElementById('inputUserId').value.padStart(8, '0');
+            window.location.href = 'http://ec2-3-144-93-114.us-east-2.compute.amazonaws.com:8012/user_booking_management/' + userId;
+        });
+
+        document.getElementById('searchButton').addEventListener('click', function() {
+            window.location.href = 'https://e6156-i-am-bezos-402423.ue.r.appspot.com' + '/search';
+        });
+    </script>
+</body>
+</html>
+

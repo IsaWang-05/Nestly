@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Host ID</title>
+    <link rel="stylesheet" type="text/css" href="/bookings_static/bookings.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/bookings_static/logo.jpeg" alt="Logo" class="logo">
+        <h1>Choose a Client Type</h1>
+        <button id="hostButton">Host</button>
+        <button id="userButton">User</button>
+    </div>
+    <script>
+        document.getElementById('hostButton').addEventListener('click', function() {
+            window.location.href = 'http://ec2-3-144-93-114.us-east-2.compute.amazonaws.com:8012' + '/host';
+        });
+
+        document.getElementById('userButton').addEventListener('click', function() {
+            window.location.href = 'https://e6156-i-am-bezos-402423.ue.r.appspot.com/user';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Search Property</title>
+    <link rel="stylesheet" type="text/css" href="/property_static/property.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/property_static/logo.jpeg" alt="Logo" class="logo">
+        <h1>Search for Properties</h1>
+        <div class="property-form">
+        <form id="searchPropertiesForm">
+            <input type="text" name="property_address" placeholder="Property Address">
+            <input type="text" name="property_id" placeholder="Property ID">
+            <input type="number" name="size_gt" placeholder="House Size Greater Than">
+            <input type="number" name="size_lt" placeholder="House Size Less Than">
+            <input type="number" name="house_size" placeholder="House Size">
+            <input type="text" name="house_type" placeholder="House Type">
+            <input type="number" name="price" placeholder="Price">
+            <input type="number" name="price_gt" placeholder="Price Greater Than">
+            <input type="number" name="price_lt" placeholder="Price Less Than">
+            <select name="availability">
+                <option value="">Any Availability</option>
+                <option value="1">Available</option>
+                <option value="0">Not Available</option>
+            </select>
+            <input type="text" name="host_id" placeholder="Host ID">
+            <button type="submit">Search</button>
+        </form>
+        <div/>
+        <div id="searchResults">
+
+        </div>
+    </div>
+
+    <script src="/property_static/search_properties.js"></script>
+</body>
+</html>

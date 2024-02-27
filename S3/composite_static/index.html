@@ -1,0 +1,113 @@
+<!-- References: -->
+    <!-- https://www.w3schools.com/html/html_forms.asp -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Composite Service Management</title>
+    <link rel="icon" type="image/x-icon" href="https://6156staticweb.s3.amazonaws.com/static/favicon.ico" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0ebe3; /* beige background */
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto; /* centering */
+            overflow: hidden;
+            padding-left: 40px; /* added padding to the left */
+        }
+        h1, h2 {
+            color: #8a7f8d; /* purple headings */
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #a3a5a7; /* grey subheadings */
+            margin-bottom: 10px;
+        }
+        form {
+            background: #d9d2c3; /* brown boxes background */
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        input[type="text"], input[type="email"], input[type="number"], select {
+            padding: 8px;
+            margin: 10px;
+            border-radius: 4px;
+            border: 1px solid #c7bfb8; /* grey border */
+            flex-basis: 180px;
+            background: #f0ebe3; /* beige background */
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #a3b1a6; /* green buttons */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        button:hover {
+            background-color: #919d90; /* darker green when hovered */
+        }
+        #getUsersResult {
+            background: #eceae4; /* grey results */
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            color: #a0a4a8; /* grey-ish blue */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Nestly</h1>
+       <!-- List Properties Form -->
+        <h2>Filter Properties</h2>
+            <form id="filterPropertiesForm">
+                <!-- input fields for querying properties -->
+                <input type="text" name="property_id" placeholder="Property ID">
+                <input type="text" name="property_address" placeholder="Property Address">
+                <input type="text" name="house_type" placeholder="House Type">
+                <input type="number" name="house_size" placeholder="House size">
+                <input type="number" name="size_gt" placeholder="House size Greater Than">
+                <input type="number" name="size_lt" placeholder="House size Less Than">
+                <input type="number" name="price" placeholder="Price">
+                <input type="number" name="price_gt" placeholder="Price Greater Than">
+                <input type="number" name="price_lt" placeholder="Price Less Than">
+                <input type="text" name="availability" placeholder="Availability (true/false)">
+                <input type="text" name="host_id" placeholder="Host ID">
+                <!-- pagination -->
+                <input type="number" name="limit" placeholder="Limit" value="10"> <!-- Default LIMIT 10 -->
+                <input type="number" name="offset" placeholder="Offset" value="0">  <!-- Default OFFSET 0 -->
+                <button type="submit">Apply Filters</button>
+            </form>
+
+        <!-- Get all properties -->
+        <h2>Get All Properties</h2>
+        <button id="getAllPropertiesButton">Get All Properties</button>
+
+        <!-- Display properties results from either 'Filter Properties' or 'Get All Properties' -->
+        <h2>Properties Results</h2>
+        <div id="getPropertiesResult"></div>
+
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
